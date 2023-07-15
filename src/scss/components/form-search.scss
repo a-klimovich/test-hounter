@@ -1,3 +1,5 @@
+@import '../mixins';
+
 .form-search {
   display: flex;
   margin: 32px 0;
@@ -7,6 +9,12 @@
   border-radius: var(--rounded-md);
   border: 1px solid var(--neutral-300, #E0E3EB);
   background: var(--white);
+
+  @include rwd(1240) {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+  }
 
   .input-wrapper {
     display: flex;

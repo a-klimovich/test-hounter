@@ -12,9 +12,7 @@
     dropdownBtns[i].addEventListener('click', function(event) {
       const dropdownContent = this.parentElement
 
-      dropdownContent.getElementsByClassName('active').length
-        ? dropdownContent.classList.remove('active')
-        : dropdownContent.classList.add('active')
+      dropdownContent.classList.toggle('active')
 
       event.stopPropagation()
     })

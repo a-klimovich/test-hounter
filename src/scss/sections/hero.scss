@@ -1,6 +1,12 @@
+@import '../mixins';
+
 .hero-section {
   overflow-x: hidden;
   position: relative;
+
+  @include rwd(1240) {
+    padding-top: 100px;
+  }
 
   span.decor-top-section {
     position: absolute;
@@ -14,6 +20,21 @@
     align-items: center;
     padding-left: calc((100% - 1200px) / 2);
 
+    @include rwd(1240) {
+      flex-direction: column;
+    }
+
+    @include md {
+      & .content__first > p {
+        max-width: 100%;
+      }
+
+      & .content__first .form-search {
+        width: 100%;
+        margin: 0 15px;
+      }
+    }
+
     &__first {
       flex-shrink: 0;
       width: 496px;
@@ -22,8 +43,27 @@
       h1 {
         margin-bottom: 24px;
       }
+
+      @include rwd(1240) {
+        margin-right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        text-align: center;
+        gap: 30px;
+
+        > h1 {
+          width: 100%;
+        }
+
+        > p {
+          width: 100%;
+          max-width: 50%;
+          margin: 0 auto;
+        }
+      }
     }
-  
+
     &__second {
       display: flex;
       align-items: flex-end;
@@ -32,20 +72,39 @@
       border-bottom-left-radius: 80px;
       overflow: hidden;
       position: relative;
-  
+
+      @include rwd(1240) {
+        width: 100%;
+        height: 350px;
+        align-items: center;
+        justify-content: flex-start;
+
+        .swiper-hero-section {
+          margin: 0 100px;
+          padding-bottom: 0;
+        }
+      }
+
       .bg-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
         position: absolute;
-        background: linear-gradient(17deg, #0C1537 0%, rgba(12, 21, 55, 0.00) 100%), lightgray -49.239px -4.186px / 124.722% 112.25% no-repeat;
+        background: linear-gradient(17deg, #0c1537 0%, rgba(12, 21, 55, 0) 100%),
+          lightgray -49.239px -4.186px / 124.722% 112.25% no-repeat;
       }
 
       .swiper-hero-section {
         margin-bottom: 46px;
         padding: 0 20px 48px 48px;
         width: calc(100% / 3);
+
+        @include md {
+          width: 100%;
+          margin: 0 20px;
+          padding: 0 20px;
+        }
 
         .swiper-slide {
           width: fit-content;

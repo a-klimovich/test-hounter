@@ -2,11 +2,18 @@
   <div class="feature-house-slide-card">
     <div class="image">
       @@imageSrc
-  
-      <div class="tag @@tag">
-        @@include('../../assets/svg/fire.svg')
-        Popular
-      </div>
+
+      @@if (tagname === 'popular') {
+        @@include('../tags/popular.html')
+      }
+
+      @@if (tagname === 'new') {
+        @@include('../tags/new.html')
+      }
+
+      @@if (tagname === 'best') {
+        @@include('../tags/best.html')
+      }
     </div>
   
     <h3 class="title">

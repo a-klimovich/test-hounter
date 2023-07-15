@@ -8,7 +8,6 @@
   <main>
     <section class="section hero-section">
       <span class="decor-top-section">
-        <!-- ? сделать комопнентом -->
         @@include('./assets/svg/decor.svg')
       </span>
 
@@ -131,7 +130,7 @@
             <div class="swiper-slide">
               @@include('./components/feature-house-slide-card/index.html', {
                 'imageSrc': '<img src="../assets/houses/house-4.jpg" alt="house image"/>',
-                'tag': 'tag--red',
+                'tagname': 'popular',
                 'title': 'Roselands House',
                 'price': '$ 35.000.000',
                 'user': {
@@ -145,13 +144,13 @@
             <div class="swiper-slide">
               @@include('./components/feature-house-slide-card/index.html', {
                 'imageSrc': '<img src="../assets/houses/house-1.jpg" alt="house image"/>',
-                'tag': 'tag--blue',
-                'title': 'Roselands House',
-                'price': '$ 35.000.000',
+                'tagname': 'new',
+                'title': 'Woodlandside',
+                'price': '$ 20.000.000',
                 'user': {
                   'avatar': '<img src="../assets/users/user-2.png" alt="user avatar">',
-                  'name': 'Dianne Russell',
-                  'location': 'Manchester, Kentucky',
+                  'name': 'Robert Fox',
+                  'location': 'Dr. San Jose, South Dakota',
                 },
               })
             </div>
@@ -159,13 +158,13 @@
             <div class="swiper-slide">
               @@include('./components/feature-house-slide-card/index.html', {
                 'imageSrc': '<img src="../assets/houses/house-2.jpg" alt="house image"/>',
-                'tag': 'tag--green',
-                'title': 'Roselands House',
-                'price': '$ 35.000.000',
+                'tagname': 'best',
+                'title': 'The Old Lighthouse',
+                'price': '$ 44.000.000',
                 'user': {
                   'avatar': '<img src="../assets/users/user-3.png" alt="user avatar">',
-                  'name': 'Dianne Russell',
-                  'location': 'Manchester, Kentucky',
+                  'name': 'Ronald Richards',
+                  'location': 'Santa Ana, Illinois',
                 },
               })
             </div>
@@ -173,13 +172,13 @@
             <div class="swiper-slide">
               @@include('./components/feature-house-slide-card/index.html', {
                 'imageSrc': '<img src="../assets/houses/house-3.jpg" alt="house image"/>',
-                'tag': 'tag--red',
-                'title': 'Roselands House',
-                'price': '$ 35.000.000',
+                'tagname': 'popular',
+                'title': "Cosmo's House",
+                'price': '$ 22.000.000',
                 'user': {
                   'avatar': '<img src="../assets/users/user-7.png" alt="user avatar">',
-                  'name': 'Dianne Russell',
-                  'location': 'Manchester, Kentucky',
+                  'name': 'Jenny Wilson',
+                  'location': 'Preston Rd. Inglewood, Maine 98380',
                 },
               })
             </div>
@@ -187,9 +186,9 @@
             <div class="swiper-slide">
               @@include('./components/feature-house-slide-card/index.html', {
                 'imageSrc': '<img src="../assets/houses/house-2.jpg" alt="house image"/>',
-                'tag': 'tag--green',
+                'tagname': 'best',
                 'title': 'Roselands House',
-                'price': '$ 35.000.000',
+                'price': '$ 355.000.000',
                 'user': {
                   'avatar': '<img src="../assets/users/user-3.png" alt="user avatar">',
                   'name': 'Dianne Russell',
@@ -201,7 +200,7 @@
             <div class="swiper-slide">
               @@include('./components/feature-house-slide-card/index.html', {
                 'imageSrc': '<img src="../assets/houses/house-3.jpg" alt="house image"/>',
-                'tag': 'tag--red',
+                'tagname': 'popular',
                 'title': 'Roselands House',
                 'price': '$ 35.000.000',
                 'user': {
@@ -216,6 +215,7 @@
       </div>
     </section>
   </main>
+
   @@include('./utils/includes.html')
 </body>
 
