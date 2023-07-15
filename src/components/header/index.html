@@ -1,1 +1,33 @@
-<header></header>
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <a href="#" class="header__logo">
+        @@include('../../assets/svg/logo.svg')
+        <span>hounter</span>
+      </a>
+  
+      <nav>
+        <ul class="header__menu">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Article</a></li>
+          <li class="dropdown">
+            <button type="button" class="dropdown-btn">
+              Property
+              @@include('../../assets/svg/arrow.svg')
+            </button>
+
+            <ul class="dropdown-content">
+              <li><a href="#">link 1</a></li>
+              <li><a href="#">link 2</a></li>
+              <li><a href="#">link 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+  
+      <a href="#" class="btn btn-sign-in">
+        Sign Up!
+      </a>
+    </div>
+  </div>
+</header>

@@ -3,10 +3,15 @@
 @@include('./utils/head.html')
 
 <body>
-  <!-- @@include('./components/header/index.html') -->
+  @@include('./components/header/index.html')
 
   <main>
     <section class="section hero-section">
+      <span class="decor-top-section">
+        <!-- ? сделать комопнентом -->
+        @@include('./assets/svg/decor.svg')
+      </span>
+
       <div class="content">
         <div class="content__first">
           <h1>
@@ -175,8 +180,6 @@
       </div>
     </section>
   </main>
-
-  @@include('./components/footer/index.html')
   @@include('./utils/includes.html')
 </body>
 
