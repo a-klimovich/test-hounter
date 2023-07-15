@@ -11,7 +11,9 @@
 
     .title {
       span {
+        display: inline-block;
         position: relative;
+        margin-bottom: 12px;
       }
 
       span::before {

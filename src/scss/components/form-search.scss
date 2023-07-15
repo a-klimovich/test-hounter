@@ -31,5 +31,16 @@
     line-height: 22px;
     color: var(--white);
     background-color: var(--green-500);
+    transition: all 0.33s;
+    border: 1px solid var(--green-500);
+
+    svg path {
+      fill: currentColor
+    }
+
+    &:hover {
+      color: var(--green-500);
+      background-color: var(--white);
+    }
   }
 }
