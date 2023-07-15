@@ -1,0 +1,49 @@
+.hero-slider-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 24px;
+  white-space: nowrap;
+  border-radius: var(--rounded-md);
+  background-color: var(--white);
+  box-shadow: 0px 11px 48px 0px rgba(51, 51, 51, 0.06);
+
+  .avatars {
+    display: inline-flex;
+    $avatarSize: 56px;
+
+    > span:not(:first-child) {
+      margin-inline-start: calc(-#{$avatarSize} / 2);
+    }
+    
+    > span {
+      width: $avatarSize;
+      height: $avatarSize;
+
+      border-radius: 50%;
+      border: 3px solid #FFF;
+      background: lightgray 50%;
+      box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.10);
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .data__title {
+    color: var(--mrt-app-headline, #1B1C57);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .data__text {
+    color: var(--mrt-app-sub-headline, #68799F);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}

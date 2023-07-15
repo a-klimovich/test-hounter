@@ -22,6 +22,7 @@ $theme-colors: (
 
   mrt-app-headline: #1b1c57,
   mrt-app-neutral-01: #626686,
+  mrt-app-sub-headline: #68799F,
 );
 
 :root {
@@ -34,6 +35,8 @@ $theme-colors: (
   --swiper-navigation-size: 44px;
 
   --headerHeight-xl: 90px;
+
+  --rounded-md: 32px;
 
   @each $name, $value in $theme-colors {
     #{'--' + $name}: #{$value};
@@ -67,5 +70,14 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  margin-top: var(--headerHeight-xl);
 }
+
+h1, .h1 {
+  color: var(--mrt-app-headline, #1B1C57);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+@import 'helpers';

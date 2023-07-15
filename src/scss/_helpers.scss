@@ -1,17 +1,12 @@
 @import './_mixins';
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
-
+  
   @include xl {
-    max-width: 1200px;
-  }
-
-  @include rwd(1200) {
-    max-width: 768px;
+    padding: 0 20px;
   }
 }
 
@@ -37,4 +32,16 @@
 
 .overflow-h {
   overflow: hidden;
+}
+
+.text-border {
+  color: currentColor;
+  -webkit-text-stroke: 1px currentColor;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  border-radius: var(--rounded-md);
+  padding: 12px 1rem;
+  cursor: pointer;
 }

@@ -3,15 +3,15 @@
 @@include('./utils/head.html')
 
 <body>
-  @@include('./components/header/index.html')
+  <!-- @@include('./components/header/index.html') -->
 
   <main>
     <section class="section hero-section">
-      <div class="section-container">
-        <div class="first">
+      <div class="content">
+        <div class="content__first">
           <h1>
-            find the place to
-            live your dreams
+            find the place to <br>
+            live <span class="text-border">your dreams</span> <br>
             easily here
           </h1>
     
@@ -21,12 +21,16 @@
     
           <form class="form-search" action="#">
             <div class="input-wrapper">
-              <div class="input-wrapper__prefix"></div>
+              <div class="input-wrapper__prefix">
+                @@include('./assets/svg/location.svg')
+              </div>
+
               <input class="input-wrapper__input" type="text" placeholder="Search for the location you want!">
             </div>
     
-            <button class="form-search__btn">
+            <button class="btn form-search__btn">
               Search
+              @@include('./assets/svg/arrow.svg')
             </button>
           </form>
     
@@ -35,20 +39,45 @@
             
             <div class="partnership__box">
               <img src="./assets/partnership_logo/traveloka_logo.png" alt="logo partnership Traveloka">
+
               <img src="./assets/partnership_logo/tiket_com_logo.png" alt="logo partnership Tiket.com">
+
               <img src="./assets/partnership_logo/airbnb_logo.png" alt="logo partnership Airbnb">
+
               <img src="./assets/partnership_logo/trip_adviser_logo.png" alt="logo partnership Trip Adviser">
             </div>
           </div>
         </div>
 
-        <div class="second">
-          <img src="./assets/hero-img.jpg" alt="house main section">
+        <div class="content__second">
+          <img class="bg-image" src="./assets/hero-img.jpg" alt="house main section">
+
+          <div class="swiper-hero-section">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                @@include('./components/hero-slider-card/index.html', {
+                  'avatar': '<span class="avatar"><img src="../assets/users/user-1.png" alt=""></span><span class="avatar"><img src="../assets/users/user-2.png" alt=""></span><span class="avatar"><img src="../assets/users/user-3.png" alt=""></span>',
+                })
+              </div>
+
+              <div class="swiper-slide">
+                @@include('./components/hero-slider-card/index.html', {
+                  'avatar': '<span class="avatar"><img src="../assets/houses/house-round.png" alt=""></span>',
+                })
+              </div>
+
+              <div class="swiper-slide">
+                @@include('./components/hero-slider-card/index.html', {
+                  'avatar': '<span class="avatar"><img src="../assets/users/user-7.png" alt=""></span>',
+                })
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-featured-house">
+    <!-- <section class="section section-featured-house">
       <div class="section-featured-house__header">
         <div class="title">
           <span>Our Recommendation</span>
@@ -74,11 +103,9 @@
         </div>
 
         <div class="slider-controls">
-          <!-- <button type="button" class="swiper-button-prev"> -->
           <button type="button" class="swiper--prev">
             @@include('./assets/svg/arrow.svg')
           </button>
-          <!-- <button type="button" class="swiper-button-next"> -->
           <button type="button" class="swiper--next">
             @@include('./assets/svg/arrow.svg')
           </button>
@@ -122,7 +149,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 
   @@include('./components/footer/index.html')

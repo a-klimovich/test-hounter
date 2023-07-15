@@ -1,0 +1,13 @@
+.partnership {
+  &__title {
+    color: var(--neutral-500, #888B97);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem; /* 200% */
+  }
+
+  &__box {
+    display: flex;
+    gap: 2rem;
+  }
+}
