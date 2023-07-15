@@ -1,0 +1,71 @@
+@import './_reset';
+@import './_mixins';
+
+$theme-colors: (
+  neutral-100: #f0f3fd,
+  neutral-300: #dfe2eb,
+  neutral-500: #878b97,
+  neutral-700: #3c4563,
+  
+  green-100: #d1fae4,
+  green-500: #15b881,
+  green-700: #057856,
+
+  yellow-500: #f59e0b,
+
+  red-100: #fde2e1,
+  red-500: #f04444,
+
+  blue-100: #dbeafe,
+  blue-500: #3b81f6,
+  blue-700: #1c4ed8,
+
+  mrt-app-headline: #1b1c57,
+  mrt-app-neutral-01: #626686,
+);
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+
+  --shadow: 0px 0px 52px 0px rgba(0, 0, 0, 0.05);
+
+  --swiper-theme-color: #007aff;
+  --swiper-navigation-size: 44px;
+
+  --headerHeight-xl: 90px;
+
+  @each $name, $value in $theme-colors {
+    #{'--' + $name}: #{$value};
+  }
+
+  @for $i from 1 through 9 {
+    --weight-#{$i * 100}: #{$i * 100};
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-display: swap;
+  font-family: 'Lexend', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+
+  font-weight: var(--weight-400);
+  color: var(--mrt-app-neutral-01, #626687);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  margin-top: var(--headerHeight-xl);
+}

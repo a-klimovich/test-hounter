@@ -1,0 +1,75 @@
+@import './_mixins';
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include xl {
+    max-width: 1200px;
+  }
+
+  @include rwd(1200) {
+    max-width: 768px;
+  }
+}
+
+@each $name, $value in $theme-colors {
+  .color-#{$name} {
+    color: var(#{'--' + $name});
+  }
+
+  .bg-#{$name} {
+    background-color: var(#{'--' + $name});
+  }
+}
+
+@for $i from 1 through 9 {
+  .weight-#{$i * 100} {
+    font-weight: var(--weight-#{$i * 100});
+  }
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.hide-md {
+  @include md {
+    display: none;
+  }
+}
+
+.position-r {
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-start {
+  text-align: left;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 4%, 0.58);
+  z-index: 999;
+
+  &.active {
+    display: block;
+  }
+}
+
+.overflow-h {
+  overflow: hidden;
+}

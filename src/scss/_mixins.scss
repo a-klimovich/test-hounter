@@ -1,0 +1,103 @@
+$media-trigger-xl: 1399.9;
+$media-trigger-md: 767.9;
+
+@mixin xl {
+  @media (max-width: ($media-trigger-xl + 'px')) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: ($media-trigger-md + 'px')) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (max-width: ($screen + 'px')) {
+    @content;
+  }
+}
+
+@mixin clampLine($visibleLineNumber) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: $visibleLineNumber;
+  -webkit-box-orient: vertical;
+  line-clamp: $visibleLineNumber;
+  box-orient: vertical;
+}
+
+@mixin burger {
+  $burger-width: 24px;
+  $burger-height: 20px;
+  $burger-line-height: 2px;
+  $this: &;
+
+  position: relative;
+  border: none;
+  padding: 0;
+  width: $burger-width;
+  height: $burger-height;
+  color: var(--orange);
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after,
+  &__line {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: $burger-line-height;
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: 0;
+    transform: translateY(-100%);
+  }
+
+  &::after {
+    top: calc(100% - $burger-line-height);
+  }
+
+  &__line {
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &.active {
+    &::before {
+      top: 50%;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    &::after {
+      top: 50%;
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    & > span {
+      visibility: hidden;
+    }
+  }
+}
+
+@mixin dynamicPropertyValue($maxValue, $minValue, $maxWidth, $minWidth, $property) {
+  @media (min-width: #{$minWidth + 'px'}) and (max-width: #{$maxWidth + 'px'}) {
+    #{$property}: calc(#{$minValue + 'px'}
+                    + (#{$maxValue} - #{$minValue})
+                    * ((100vw - #{$minWidth + 'px'})
+                    / (#{$maxWidth} - #{$minWidth}))
+                  );
+  }
+}

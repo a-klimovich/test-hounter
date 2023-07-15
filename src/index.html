@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./utils/head.html')
+
+<body>
+  @@include('./components/header/index.html')
+
+  <main>
+    <section class="section hero-section">
+      <div class="section-container">
+        <div class="first">
+          <h1>
+            find the place to
+            live your dreams
+            easily here
+          </h1>
+    
+          <p>
+            Everything you need about finding your place to live will be here, where it will be easier for you
+          </p>
+    
+          <form class="form-search" action="#">
+            <div class="input-wrapper">
+              <div class="input-wrapper__prefix"></div>
+              <input class="input-wrapper__input" type="text" placeholder="Search for the location you want!">
+            </div>
+    
+            <button class="form-search__btn">
+              Search
+            </button>
+          </form>
+    
+          <div class="partnership">
+            <p class="partnership__title">Our Partnership</p>
+            
+            <div class="partnership__box">
+              <img src="./assets/partnership_logo/traveloka_logo.png" alt="logo partnership Traveloka">
+              <img src="./assets/partnership_logo/tiket_com_logo.png" alt="logo partnership Tiket.com">
+              <img src="./assets/partnership_logo/airbnb_logo.png" alt="logo partnership Airbnb">
+              <img src="./assets/partnership_logo/trip_adviser_logo.png" alt="logo partnership Trip Adviser">
+            </div>
+          </div>
+        </div>
+
+        <div class="second">
+          <img src="./assets/" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-featured-house">
+      <div class="section-featured-house__header">
+        <div class="title">
+          <span>Our Recommendation</span>
+
+          <h2>Featured House</h2>
+        </div>
+
+        <div class="category-selects">
+          <button type="button">
+            @@include('./assets/svg/house.svg')
+            House
+          </button>
+
+          <button type="button">
+            @@include('./assets/svg/villa.svg')
+            Villa
+          </button>
+
+          <button type="button">
+            @@include('./assets/svg/apartment.svg')
+            Apartment
+          </button>
+        </div>
+
+        <div class="slider-controls">
+          <button type="button" class="swiper-button-prev">
+            @@include('./assets/svg/arrow.svg')
+          </button>
+          <button type="button" class="swiper-button-next">
+            @@include('./assets/svg/arrow.svg')
+          </button>
+        </div>
+      </div>
+
+      <div class="section-featured-house__body" style="width: 600px;">
+        <div class="swiperFeaturedHouse">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card__cover">
+                  <img src="./assets/houses/house-1.jpg" alt="">
+                  <div class="tag"></div>
+                </div>
+
+                <h3 class="card__title">
+                  Roselands House
+                </h3>
+
+                <div class="card__price">
+                  $ 35.000.000
+                </div>
+
+                <div class="user">
+                  <div class="user__avatar">
+                    <img src="./assets//users/user-1.jpg" alt="avatar">
+                  </div>
+
+                  <div class="user__data">
+                    <div class="user__name">Dianne Russell</div>
+                    <div class="user__location">Manchester, Kentucky</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">Slide 2</div>
+
+            <div class="swiper-slide">Slide 3</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @@include('./components/footer/index.html')
+  @@include('./utils/includes.html')
+</body>
+
+</html>
