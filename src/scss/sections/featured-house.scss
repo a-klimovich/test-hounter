@@ -57,12 +57,8 @@
       .swiper-next {
         display: inline-flex;
         align-items: center;
-        background: var(--neutral-300, #e0e3eb);
         transition: all 0.2s;
-
-        &:not(.button-disabled):hover {
-          background: var(--green-500, #10b981);
-        }
+        background: var(--green-500, #10b981);
       }
 
       .swiper-prev {
@@ -71,7 +67,9 @@
         }
       }
 
-      
+      button.button-disabled {
+        background: var(--neutral-300, #e0e3eb);
+      }
     }
   }
 
