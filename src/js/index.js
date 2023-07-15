@@ -19,4 +19,15 @@
   }
 
   document.body.addEventListener('click', closeDropdown)
+
+
+  const $hamburger = document.querySelector('.hamburger')
+  const $nav = document.querySelector('header nav')
+  const $overlay = document.querySelector('.overlay')
+
+  $hamburger.addEventListener('click', () => {
+    $hamburger.classList.toggle('active')
+    $nav.classList.toggle('active')
+    $overlay.classList.toggle('active')
+  })
 })()

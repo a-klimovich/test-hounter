@@ -35,7 +35,7 @@ $media-trigger-md: 767.9;
 @mixin burger {
   $burger-width: 24px;
   $burger-height: 20px;
-  $burger-line-height: 2px;
+  $burger-line-height: 3px;
   $this: &;
 
   position: relative;
@@ -43,7 +43,7 @@ $media-trigger-md: 767.9;
   padding: 0;
   width: $burger-width;
   height: $burger-height;
-  color: var(--orange);
+  color: var(--green-500);
   background-color: transparent;
   cursor: pointer;
 

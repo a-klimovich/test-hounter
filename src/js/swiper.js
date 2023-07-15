@@ -1,4 +1,11 @@
 ;(function () {
+  const heroSectionSwiper = new Swiper('.swiper-hero-section', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    freeMode: true,
+    grabCursor: true,
+  })
+
   const $prevBtn = document.getElementById('swiperFeaturedHouseBtnPrev')
   const $nextBtn = document.getElementById('swiperFeaturedHouseBtnNext')
 
@@ -6,7 +13,11 @@
     slidesPerView: 'auto',
     freeMode: true,
     spaceBetween: 40,
-    allowTouchMove: false
+    breakpoints: {
+      768: {
+        allowTouchMove: false,
+      },
+    }
   })
 
   $prevBtn.addEventListener('click', () => {
@@ -27,12 +38,5 @@
       $nextBtn.classList.add('button-disabled')
       $prevBtn.classList.remove('button-disabled')
     }
-  });
-
-  const heroSectionSwiper = new Swiper('.swiper-hero-section', {
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    freeMode: true,
-    grabCursor: true,
   })
 })()

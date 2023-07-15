@@ -58,14 +58,47 @@
     }
   }
 
-  @include rwd(1200) {
-    nav {
-      display: none;
+  nav.active {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    
+
+    ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+
+      li {
+        width: 100%;
+      }
+
+      li a, li button {
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        padding: 1rem;
+      }
     }
   }
 
   .hamburger {
+    display: none;
+    align-items: center;
+
     @include burger;
+  }
+
+  @include rwd(1200) {
+    nav {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
   }
 
   .btn-sign-in {
