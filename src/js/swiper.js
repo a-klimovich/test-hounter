@@ -18,7 +18,6 @@
   })
 
   swiperFeatureHouses.on('slideChange', (e) => {
-    console.log(e);
     if (e.isBeginning) {
       $nextBtn.classList.remove('button-disabled')
       $prevBtn.classList.add('button-disabled')
