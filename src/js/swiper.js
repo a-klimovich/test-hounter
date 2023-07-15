@@ -21,9 +21,11 @@
     if (e.isBeginning) {
       $nextBtn.classList.remove('button-disabled')
       $prevBtn.classList.add('button-disabled')
-    } else {
-      $prevBtn.classList.remove('button-disabled')
+    }
+
+    if (e.isEnd) {
       $nextBtn.classList.add('button-disabled')
+      $prevBtn.classList.remove('button-disabled')
     }
   });
 
