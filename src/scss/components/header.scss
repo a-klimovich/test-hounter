@@ -101,6 +101,12 @@
     }
   }
 
+  @keyframes animateHover {
+    0%{background-position:26% 0%}
+    50%{background-position:75% 100%}
+    100%{background-position:26% 0%}
+  }
+
   .btn-sign-in {
     margin-left: 56px;
     text-transform: capitalize;
@@ -110,5 +116,22 @@
     font-weight: 600;
     line-height: 22px;
     background: var(--green-100, #d1fae5);
+    background-image: linear-gradient(to right, var(--green-100, #d1fae5), var(--white), var(--green-100, #d1fae5));
+    background-size: 400% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    
+    &:hover {
+      background-position: 100% 0;
+      moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+
+      box-shadow: 0 4px 15px 0 rgba(4, 120, 87, 0.192);
+      animation: animateHover 0.5s ease infinite linear;
+    }
   }
 }
